@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legacy Line Charts v1.4 - EGF Green Wave</title>
+    <title>Legacy Line Charts v11.6</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -108,68 +108,21 @@
         );
 
         // ============================================================
-        // SUBSCRIBER CONFIGURATION - EAST GRAND FORKS GREEN WAVE
+        // SUBSCRIBER CONFIGURATION
+        // Set SUBSCRIBER_MODE = true when building subscriber sites
+        // Then populate EMBEDDED_CONFIG with their exported data
         // ============================================================
-        const SUBSCRIBER_MODE = true;
+        const SUBSCRIBER_MODE = false;  // Master site = false, Subscriber sites = true
         
+        const EMBEDDED_CONFIG = null;   // null for master site, or paste exported config for subscribers
+        /* Example for subscriber site:
         const EMBEDDED_CONFIG = {
           siteId: 'east-grand-forks',
-          teamSetup: {
-            teamName: 'East Grand Forks Green Wave',
-            logo: 'data:image/png;base64,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',
-            colors: { primary: '#027308', secondary: '#cc1d02' },
-            arena: 'EGF Civic Center, East Grand Forks MN',
-            pronunciations: {}
-          },
-          careerStats: {
-            "VARNSON_HUN": { "type": "skater", "data": { "gp": 87, "g": 24, "a": 50, "pts": 74, "pim": 72, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "LOVEJOY_TUC": { "type": "skater", "data": { "gp": 55, "g": 30, "a": 23, "pts": 53, "pim": 22, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "EPS_JAC": { "type": "skater", "data": { "gp": 87, "g": 39, "a": 36, "pts": 75, "pim": 35, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "HILLS_COO": { "type": "skater", "data": { "gp": 87, "g": 17, "a": 51, "pts": 68, "pim": 33, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "PANZER_JAC": { "type": "skater", "data": { "gp": 55, "g": 14, "a": 31, "pts": 45, "pim": 8, "plusMinus": 2, "fow": 0, "fol": 0 } },
-            "BIES_COL": { "type": "skater", "data": { "gp": 84, "g": 18, "a": 33, "pts": 51, "pim": 108, "plusMinus": 2, "fow": 0, "fol": 0 } },
-            "MEULEBROECK_NOL": { "type": "skater", "data": { "gp": 56, "g": 9, "a": 24, "pts": 33, "pim": 20, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "PESCH_JUD": { "type": "skater", "data": { "gp": 87, "g": 6, "a": 28, "pts": 34, "pim": 90, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "CORBETT_NIC": { "type": "skater", "data": { "gp": 83, "g": 8, "a": 23, "pts": 31, "pim": 52, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "SCHMIEDEBERG_COL": { "type": "skater", "data": { "gp": 49, "g": 7, "a": 7, "pts": 14, "pim": 6, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "BIES_MAX": { "type": "skater", "data": { "gp": 19, "g": 3, "a": 5, "pts": 8, "pim": 12, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "CHUPKA_JAK": { "type": "skater", "data": { "gp": 32, "g": 3, "a": 3, "pts": 6, "pim": 12, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "CLAUSON_RYA": { "type": "skater", "data": { "gp": 29, "g": 1, "a": 3, "pts": 4, "pim": 4, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "OVERGAARD_BRA": { "type": "skater", "data": { "gp": 58, "g": 3, "a": 6, "pts": 9, "pim": 23, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "CORDTS_WYA": { "type": "skater", "data": { "gp": 27, "g": 0, "a": 3, "pts": 3, "pim": 10, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "NOWACKI_JOR": { "type": "skater", "data": { "gp": 38, "g": 1, "a": 2, "pts": 3, "pim": 15, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "FRIZE_NOA": { "type": "skater", "data": { "gp": 41, "g": 0, "a": 2, "pts": 2, "pim": 2, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "SCHMALTZ_BOD": { "type": "skater", "data": { "gp": 25, "g": 1, "a": 0, "pts": 1, "pim": 2, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "BRATRUD_WES": { "type": "skater", "data": { "gp": 18, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "LIND_SHA": { "type": "skater", "data": { "gp": 9, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "JOHNSON_BRO": { "type": "skater", "data": { "gp": 1, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "BOESPFLUG_CHA": { "type": "goalie", "data": { "gp": 4, "min": "0:00", "w": 0, "l": 0, "t": 0, "so": 0, "ga": 0, "sv": 0 } },
-            "ROGNERUD_CAM": { "type": "goalie", "data": { "gp": 1, "min": "22:58", "w": 0, "l": 0, "t": 0, "so": 0, "ga": 4, "sv": 4 } },
-            "ROCKSTAD_RYA": { "type": "goalie", "data": { "gp": 26, "min": "1224:05", "w": 13, "l": 10, "t": 1, "so": 3, "ga": 68, "sv": 427 } },
-            "SCHINDELE_NOA": { "type": "goalie", "data": { "gp": 28, "min": "1426:10", "w": 15, "l": 10, "t": 2, "so": 4, "ga": 73, "sv": 591 } },
-            "SCHULTZ_BRO": { "type": "skater", "data": { "gp": 55, "g": 44, "a": 52, "pts": 96, "pim": 59, "plusMinus": 2, "fow": 0, "fol": 0 } },
-            "JAMIESON_LAN": { "type": "skater", "data": { "gp": 56, "g": 31, "a": 52, "pts": 83, "pim": 14, "plusMinus": 2, "fow": 0, "fol": 0 } },
-            "MAGNER_GRA": { "type": "skater", "data": { "gp": 56, "g": 28, "a": 29, "pts": 57, "pim": 32, "plusMinus": 2, "fow": 0, "fol": 0 } },
-            "FORE_JAC": { "type": "skater", "data": { "gp": 54, "g": 14, "a": 21, "pts": 35, "pim": 4, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "SCHMALTZ_CUL": { "type": "skater", "data": { "gp": 56, "g": 4, "a": 11, "pts": 15, "pim": 20, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "BURGER_GRA": { "type": "skater", "data": { "gp": 20, "g": 2, "a": 2, "pts": 4, "pim": 8, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "MOE_CHA": { "type": "skater", "data": { "gp": 92, "g": 15, "a": 7, "pts": 22, "pim": 25, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "BOESPFLUG_KAD": { "type": "skater", "data": { "gp": 8, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "NOLTE_PAR": { "type": "skater", "data": { "gp": 2, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "MCMAHON_THO": { "type": "goalie", "data": { "gp": 12, "min": "214:10", "w": 3, "l": 1, "t": 0, "so": 2, "ga": 7, "sv": 41 } },
-            "WAVRA_LUC": { "type": "goalie", "data": { "gp": 20, "min": "395:30", "w": 4, "l": 3, "t": 0, "so": 0, "ga": 21, "sv": 122 } },
-            "SCHMIEDEBERG_CAL": { "type": "skater", "data": { "gp": 26, "g": 8, "a": 9, "pts": 17, "pim": 14, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "FROST_SAM": { "type": "skater", "data": { "gp": 27, "g": 2, "a": 9, "pts": 11, "pim": 16, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "SEYDEL_GAG": { "type": "skater", "data": { "gp": 26, "g": 4, "a": 2, "pts": 6, "pim": 4, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "SCHUMACHER_SAM": { "type": "skater", "data": { "gp": 25, "g": 1, "a": 4, "pts": 5, "pim": 2, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "KOFSTAD_CAM": { "type": "skater", "data": { "gp": 24, "g": 1, "a": 1, "pts": 2, "pim": 6, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "WOIDTKE_LAN": { "type": "skater", "data": { "gp": 3, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "PAVLISH_BRA": { "type": "skater", "data": { "gp": 7, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "HOLM_CHR": { "type": "skater", "data": { "gp": 3, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0 } },
-            "MERO_CHA": { "type": "goalie", "data": { "gp": 25, "min": "1242:38", "w": 15, "l": 10, "t": 0, "so": 4, "ga": 59, "sv": 483 } }
-          },
-          careerSeasonData: { season1: '', season2: '', season3: '' }
+          teamSetup: { teamName: '...', logo: '...', colors: {...}, arena: '...', pronunciations: {...} },
+          careerStats: { LASTNAME_FIR: { type: 'skater', data: {...} }, ... },
+          careerSeasonData: { season1: '...', season2: '...', season3: '...' }
         };
+        */
         // ============================================================
 
         const HockeyLinesChart = () => {
@@ -184,7 +137,7 @@
               teamName: 'Delano Tigers',
               logo: null,
               colors: { primary: '#fb923c', secondary: '#1f2937' },
-              arena: 'Delano Area Sports Arena, Delano',
+              arena: '',
               careerStats: {},
               pronunciations: {},
               careerSeasonData: {
@@ -454,14 +407,19 @@
             const exportObj = {
               _exportInfo: {
                 exportDate: new Date().toISOString(),
-                version: '10.5',
+                version: '11.6',
                 teamName: myTeamSetup.teamName,
                 description: 'Full team configuration for subscriber site build'
               },
               myTeamSetup: {
-                ...myTeamSetup,
-                // Include career stats from localStorage
-                careerStats: storedCareerStats
+                teamName: myTeamSetup.teamName,
+                logo: myTeamSetup.logo,
+                colors: myTeamSetup.colors,
+                arena: myTeamSetup.arena,
+                // Career stats from localStorage (not from myTeamSetup)
+                careerStats: storedCareerStats,
+                // Pronunciations always empty for subscribers - they add their own
+                pronunciations: {}
               },
               // Include raw career season paste data
               careerSeasonData: {
@@ -892,6 +850,8 @@
                       const dateMatch = fullLine.match(/^([A-Za-z]{3}\s+[A-Za-z]{3}\s+\d{1,2},?\s+\d{4}\s*@\s*\d{1,2}:\d{2}[ap]?m?)/i);
                       if (dateMatch) {
                         date = dateMatch[1];
+                        // Normalize time format: 7:00p -> 7:00pm
+                        date = date.replace(/(\d:\d{2})([ap])(?!m)/i, '$1$2m');
                       } else {
                         // Fallback - just take up to the time
                         const parts = fullLine.split(/\s+(?=[A-Z][a-z]+\s+[A-Z])/);
@@ -936,7 +896,8 @@
                     if (line.includes('@') && line.match(/\d{1,2}:\d{2}/)) {
                       const parts = line.split('@');
                       date = parts[0]?.trim() || '';
-                      time = parts[1]?.trim() || '';
+                      // Normalize time format: 7:00p -> 7:00pm
+                      time = (parts[1]?.trim() || '').replace(/(\d:\d{2})([ap])(?!m)/i, '$1$2m');
                     }
                     
                     // Location line - typically follows the date/time and contains arena name
@@ -3031,52 +2992,28 @@
                     </div>
                   </div>
 
-                  {/* C4 (24%) - CENTER: TEAM NAMES GRID + GAME INFO */}
-                  <div className="flex flex-col justify-between">
-                    <div className="bg-gray-100 rounded p-1 mb-0">
-                      <div className="flex gap-1" style={{ height: '70px' }}>
-                        <div className="grid gap-0" style={{ 
-                          gridTemplateColumns: 'repeat(3, 1fr)',
-                          gridTemplateRows: 'repeat(4, 1fr)',
-                          flex: '3'
-                        }}>
-                          {[...Array(12)].map((_, i) => (
-                            <div key={`left-${i}`} className="bg-white border border-gray-300"></div>
-                          ))}
-                        </div>
-                        <div style={{ width: '0.5fr' }}></div>
-                        <div className="grid gap-0" style={{ 
-                          gridTemplateColumns: 'repeat(2, 1fr)',
-                          gridTemplateRows: 'repeat(4, 1fr)',
-                          flex: '2'
-                        }}>
-                          {[...Array(8)].map((_, i) => (
-                            <div key={`right-${i}`} className="bg-white border border-gray-300"></div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex-1 flex flex-col items-center justify-end text-center" style={{ paddingBottom: '4px' }}>
-                      <div style={{ fontSize: 'clamp(14px, 1.8vw, 20px)', color: myTeamSetup.colors.primary }} className="font-black leading-tight">
+                  {/* C4 (24%) - CENTER: TEAM NAMES + GAME INFO */}
+                  <div className="flex flex-col justify-center">
+                    <div className="flex-1 flex flex-col items-center justify-center text-center">
+                      <div style={{ fontSize: 'clamp(17px, 2.2vw, 24px)', color: myTeamSetup.colors.primary }} className="font-black leading-tight">
                         {myTeamSetup.teamName}
                       </div>
-                      <div style={{ fontSize: 'clamp(7px, 0.8vw, 9px)' }} className="text-gray-700">
+                      <div style={{ fontSize: 'clamp(11px, 1.4vw, 15px)' }} className="text-gray-600">
                         ({myTeamData.record.w}-{myTeamData.record.l}-{myTeamData.record.t}, {myTeamData.section}, {myTeamData.conference})
                       </div>
                       
                       <div style={{ fontSize: 'clamp(10px, 1.3vw, 14px)', padding: '1px 0' }} className="font-semibold text-gray-600">vs</div>
                       
-                      <div style={{ fontSize: 'clamp(14px, 1.8vw, 20px)', color: opponentColors.primary }} className="font-black leading-tight">
+                      <div style={{ fontSize: 'clamp(17px, 2.2vw, 24px)', color: opponentColors.primary }} className="font-black leading-tight">
                         {opponentData.teamName} {opponentData.nickname}
                       </div>
-                      <div style={{ fontSize: 'clamp(7px, 0.8vw, 9px)' }} className="text-gray-700">
+                      <div style={{ fontSize: 'clamp(11px, 1.4vw, 15px)' }} className="text-gray-600">
                         ({opponentData.record.w}-{opponentData.record.l}-{opponentData.record.t}, {opponentData.section}, {opponentData.conference})
                       </div>
                       
                       <div style={{ fontSize: 'clamp(11px, 1.4vw, 15px)', fontWeight: '800', marginTop: '2px' }} className="text-gray-600">Game #{(myTeamData.record.w + myTeamData.record.l + myTeamData.record.t + 1)}</div>
                       {myTeamData.currentGame && myTeamData.currentGame.date && (
-                        <div style={{ fontSize: 'clamp(7px, 0.8vw, 9px)' }} className="text-gray-700">
+                        <div style={{ fontSize: 'clamp(11px, 1.4vw, 15px)' }} className="text-gray-600">
                           {myTeamData.currentGame.date}{myTeamData.currentGame.time ? ` @ ${myTeamData.currentGame.time}` : ''}
                           {myTeamData.currentGame.location ? ` at ${myTeamData.currentGame.location}` : ''}
                         </div>
