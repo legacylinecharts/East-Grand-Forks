@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legacy Line Charts v63.4</title>
+    <title>Legacy Line Charts v63.5</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone@7.23.10/babel.min.js"></script>
@@ -171,51 +171,52 @@
             colors: { primary: "#007800", secondary: "#CC0000" },
             arena: "",
             careerStats: {
-              "LOVEJOY_TUC": {"type": "skater", "data": {"gp": 82, "g": 57, "a": 46, "pts": 103, "pim": 64, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "PANZER_JAC": {"type": "skater", "data": {"gp": 79, "g": 26, "a": 57, "pts": 83, "pim": 22, "plusMinus": 2, "fow": 0, "fol": 0, "bs": 0}},
+              "LOVEJOY_TUCK": {"type": "skater", "data": {"gp": 82, "g": 57, "a": 46, "pts": 103, "pim": 64, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "PANZER_JACE": {"type": "skater", "data": {"gp": 79, "g": 26, "a": 57, "pts": 83, "pim": 22, "plusMinus": 2, "fow": 0, "fol": 0, "bs": 0}},
               "BIES_MAX": {"type": "skater", "data": {"gp": 45, "g": 11, "a": 29, "pts": 40, "pim": 36, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
               "HJELMEN_CY": {"type": "skater", "data": {"gp": 27, "g": 10, "a": 16, "pts": 26, "pim": 28, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "MEULEBROECK_NOL": {"type": "skater", "data": {"gp": 80, "g": 18, "a": 40, "pts": 58, "pim": 50, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "CORDTS_WYA": {"type": "skater", "data": {"gp": 52, "g": 6, "a": 9, "pts": 15, "pim": 51, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "SCHMIEDEBERG_COL": {"type": "skater", "data": {"gp": 75, "g": 9, "a": 16, "pts": 25, "pim": 17, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "OVERGAARD_BRA": {"type": "skater", "data": {"gp": 79, "g": 7, "a": 12, "pts": 19, "pim": 43, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "CLAUSON_RYA": {"type": "skater", "data": {"gp": 56, "g": 2, "a": 12, "pts": 14, "pim": 8, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "CHUPKA_JAK": {"type": "skater", "data": {"gp": 57, "g": 8, "a": 6, "pts": 14, "pim": 32, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "LIND_SHA": {"type": "skater", "data": {"gp": 36, "g": 3, "a": 4, "pts": 7, "pim": 4, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "KOVAR_GRA": {"type": "skater", "data": {"gp": 27, "g": 0, "a": 7, "pts": 7, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "OLSON_EAS": {"type": "skater", "data": {"gp": 26, "g": 2, "a": 4, "pts": 6, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "SCHMALTZ_BOD": {"type": "skater", "data": {"gp": 52, "g": 3, "a": 2, "pts": 5, "pim": 6, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "BRATRUD_WES": {"type": "skater", "data": {"gp": 40, "g": 0, "a": 1, "pts": 1, "pim": 4, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "FRIZE_MAS": {"type": "skater", "data": {"gp": 18, "g": 0, "a": 1, "pts": 1, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "MORELAND_BRO": {"type": "skater", "data": {"gp": 3, "g": 0, "a": 1, "pts": 1, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "JOHNSON_BRO": {"type": "skater", "data": {"gp": 25, "g": 0, "a": 0, "pts": 0, "pim": 4, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "BUZICK_MAS": {"type": "skater", "data": {"gp": 4, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "ULLAND_MAS": {"type": "skater", "data": {"gp": 24, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "SCHINDELE_NOA": {"type": "goalie", "data": {"gp": 53, "min": "2698:13", "w": 25, "l": 23, "t": 4, "so": 6, "ga": 149, "sv": 1148}},
-              "STAUSS_KAD": {"type": "skater", "data": {"gp": 2, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "BOESPFLUG_CHA": {"type": "goalie", "data": {"gp": 7, "min": "124:26", "w": 1, "l": 1, "t": 0, "so": 0, "ga": 8, "sv": 54}},
-              "GUNDERSON_AID": {"type": "goalie", "data": {"gp": 1, "min": "2:00", "w": 0, "l": 0, "t": 0, "so": 0, "ga": 0, "sv": 1}},
-              "VARNSON_HUN": {"type": "skater", "data": {"gp": 59, "g": 21, "a": 43, "pts": 64, "pim": 56, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "EPS_JAC": {"type": "skater", "data": {"gp": 59, "g": 26, "a": 28, "pts": 54, "pim": 28, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "HILLS_COO": {"type": "skater", "data": {"gp": 59, "g": 15, "a": 39, "pts": 54, "pim": 27, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "BIES_COL": {"type": "skater", "data": {"gp": 58, "g": 11, "a": 24, "pts": 35, "pim": 70, "plusMinus": 2, "fow": 0, "fol": 0, "bs": 0}},
-              "PESCH_JUD": {"type": "skater", "data": {"gp": 59, "g": 6, "a": 22, "pts": 28, "pim": 58, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "CORBETT_NIC": {"type": "skater", "data": {"gp": 57, "g": 8, "a": 16, "pts": 24, "pim": 22, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "NOWACKI_JOR": {"type": "skater", "data": {"gp": 34, "g": 1, "a": 2, "pts": 3, "pim": 15, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "FRIZE_NOA": {"type": "skater", "data": {"gp": 37, "g": 0, "a": 2, "pts": 2, "pim": 2, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "ROGNERUD_CAM": {"type": "goalie", "data": {"gp": 1, "min": "22:58", "w": 0, "l": 0, "t": 0, "so": 0, "ga": 4, "sv": 4}},
-              "ROCKSTAD_RYA": {"type": "goalie", "data": {"gp": 26, "min": "1224:05", "w": 13, "l": 10, "t": 1, "so": 3, "ga": 68, "sv": 427}},
-              "SCHULTZ_BRO": {"type": "skater", "data": {"gp": 28, "g": 23, "a": 31, "pts": 54, "pim": 19, "plusMinus": 2, "fow": 0, "fol": 0, "bs": 0}},
-              "JAMIESON_LAN": {"type": "skater", "data": {"gp": 28, "g": 19, "a": 27, "pts": 46, "pim": 8, "plusMinus": 2, "fow": 0, "fol": 0, "bs": 0}},
-              "MAGNER_GRA": {"type": "skater", "data": {"gp": 28, "g": 18, "a": 19, "pts": 37, "pim": 16, "plusMinus": 2, "fow": 0, "fol": 0, "bs": 0}},
-              "FORE_JAC": {"type": "skater", "data": {"gp": 27, "g": 9, "a": 11, "pts": 20, "pim": 4, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "SCHMALTZ_CUL": {"type": "skater", "data": {"gp": 28, "g": 3, "a": 8, "pts": 11, "pim": 8, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "BURGER_GRA": {"type": "skater", "data": {"gp": 20, "g": 2, "a": 2, "pts": 4, "pim": 8, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "MOE_CHA": {"type": "skater", "data": {"gp": 42, "g": 4, "a": 2, "pts": 6, "pim": 2, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "BOESPFLUG_KAD": {"type": "skater", "data": {"gp": 6, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "NOLTE_PAR": {"type": "skater", "data": {"gp": 2, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
-              "MCMAHON_THO": {"type": "goalie", "data": {"gp": 12, "min": "214:10", "w": 3, "l": 1, "t": 0, "so": 2, "ga": 7, "sv": 41}},
-              "WAVRA_LUC": {"type": "goalie", "data": {"gp": 10, "min": "204:00", "w": 3, "l": 1, "t": 0, "so": 0, "ga": 7, "sv": 53}}
+              "MEULEBROECK_NOLA": {"type": "skater", "data": {"gp": 80, "g": 18, "a": 40, "pts": 58, "pim": 50, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "CORDTS_WYAT": {"type": "skater", "data": {"gp": 52, "g": 6, "a": 9, "pts": 15, "pim": 51, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "SCHMIEDEBERG_COLE": {"type": "skater", "data": {"gp": 75, "g": 9, "a": 16, "pts": 25, "pim": 17, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "OVERGAARD_BRAD": {"type": "skater", "data": {"gp": 79, "g": 7, "a": 12, "pts": 19, "pim": 43, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "CLAUSON_RYAN": {"type": "skater", "data": {"gp": 56, "g": 2, "a": 12, "pts": 14, "pim": 8, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "CHUPKA_JAKE": {"type": "skater", "data": {"gp": 57, "g": 8, "a": 6, "pts": 14, "pim": 32, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "LIND_SHAW": {"type": "skater", "data": {"gp": 36, "g": 3, "a": 4, "pts": 7, "pim": 4, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "KOVAR_GRAN": {"type": "skater", "data": {"gp": 27, "g": 0, "a": 7, "pts": 7, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "OLSON_EAST": {"type": "skater", "data": {"gp": 26, "g": 2, "a": 4, "pts": 6, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "SCHMALTZ_BODE": {"type": "skater", "data": {"gp": 52, "g": 3, "a": 2, "pts": 5, "pim": 6, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "BRATRUD_WEST": {"type": "skater", "data": {"gp": 40, "g": 0, "a": 1, "pts": 1, "pim": 4, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "FRIZE_MASO": {"type": "skater", "data": {"gp": 18, "g": 0, "a": 1, "pts": 1, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "MORELAND_BROO": {"type": "skater", "data": {"gp": 3, "g": 0, "a": 1, "pts": 1, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "JOHNSON_BROD": {"type": "skater", "data": {"gp": 25, "g": 0, "a": 0, "pts": 0, "pim": 4, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "BUZICK_MASO": {"type": "skater", "data": {"gp": 4, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "ULLAND_MASO": {"type": "skater", "data": {"gp": 24, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "SCHINDELE_NOAH": {"type": "goalie", "data": {"gp": 53, "min": "2698:13", "w": 25, "l": 23, "t": 4, "so": 6, "ga": 149, "sv": 1148}},
+              "STAUSS_KADE": {"type": "skater", "data": {"gp": 2, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "BOESPFLUG_CHAY": {"type": "goalie", "data": {"gp": 7, "min": "124:26", "w": 1, "l": 1, "t": 0, "so": 0, "ga": 8, "sv": 54}},
+              "GUNDERSON_AIDE": {"type": "goalie", "data": {"gp": 1, "min": "2:00", "w": 0, "l": 0, "t": 0, "so": 0, "ga": 0, "sv": 1}},
+              "VARNSON_HUNT": {"type": "skater", "data": {"gp": 59, "g": 21, "a": 43, "pts": 64, "pim": 56, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "EPS_JACE": {"type": "skater", "data": {"gp": 59, "g": 26, "a": 28, "pts": 54, "pim": 28, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "HILLS_COOP": {"type": "skater", "data": {"gp": 59, "g": 15, "a": 39, "pts": 54, "pim": 27, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "BIES_COLE": {"type": "skater", "data": {"gp": 58, "g": 11, "a": 24, "pts": 35, "pim": 70, "plusMinus": 2, "fow": 0, "fol": 0, "bs": 0}},
+              "PESCH_JUDD": {"type": "skater", "data": {"gp": 59, "g": 6, "a": 22, "pts": 28, "pim": 58, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "CORBETT_NICK": {"type": "skater", "data": {"gp": 57, "g": 8, "a": 16, "pts": 24, "pim": 22, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "NOWACKI_JORD": {"type": "skater", "data": {"gp": 34, "g": 1, "a": 2, "pts": 3, "pim": 15, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "FRIZE_NOAH": {"type": "skater", "data": {"gp": 37, "g": 0, "a": 2, "pts": 2, "pim": 2, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "ROGNERUD_CAMD": {"type": "goalie", "data": {"gp": 1, "min": "22:58", "w": 0, "l": 0, "t": 0, "so": 0, "ga": 4, "sv": 4}},
+              "ROCKSTAD_RYAN": {"type": "goalie", "data": {"gp": 26, "min": "1224:05", "w": 13, "l": 10, "t": 1, "so": 3, "ga": 68, "sv": 427}},
+              "SCHULTZ_BROC": {"type": "skater", "data": {"gp": 28, "g": 23, "a": 31, "pts": 54, "pim": 19, "plusMinus": 2, "fow": 0, "fol": 0, "bs": 0}},
+              "JAMIESON_LAND": {"type": "skater", "data": {"gp": 28, "g": 19, "a": 27, "pts": 46, "pim": 8, "plusMinus": 2, "fow": 0, "fol": 0, "bs": 0}},
+              "MAGNER_GRAD": {"type": "skater", "data": {"gp": 28, "g": 18, "a": 19, "pts": 37, "pim": 16, "plusMinus": 2, "fow": 0, "fol": 0, "bs": 0}},
+              "FORE_JACE": {"type": "skater", "data": {"gp": 27, "g": 9, "a": 11, "pts": 20, "pim": 4, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "SCHMALTZ_CULL": {"type": "skater", "data": {"gp": 28, "g": 3, "a": 8, "pts": 11, "pim": 8, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "BURGER_GRAN": {"type": "skater", "data": {"gp": 20, "g": 2, "a": 2, "pts": 4, "pim": 8, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "MOE_CHAN": {"type": "skater", "data": {"gp": 27, "g": 1, "a": 2, "pts": 3, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "MOE_CHAS": {"type": "skater", "data": {"gp": 15, "g": 3, "a": 0, "pts": 3, "pim": 2, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "BOESPFLUG_KADO": {"type": "skater", "data": {"gp": 6, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "NOLTE_PARK": {"type": "skater", "data": {"gp": 2, "g": 0, "a": 0, "pts": 0, "pim": 0, "plusMinus": 0, "fow": 0, "fol": 0, "bs": 0}},
+              "MCMAHON_THOM": {"type": "goalie", "data": {"gp": 12, "min": "214:10", "w": 3, "l": 1, "t": 0, "so": 2, "ga": 7, "sv": 41}},
+              "WAVRA_LUCA": {"type": "goalie", "data": {"gp": 10, "min": "204:00", "w": 3, "l": 1, "t": 0, "so": 0, "ga": 7, "sv": 53}}
             },
             pronunciations: {}
           },
@@ -658,6 +659,44 @@
             if (total < bestDist) { bestDist = total; best = p; }
           }
           return best;
+        };
+
+        // v63.5: career-stats key is LASTNAME_FIRST4 — full last name + first 4 letters of the first name.
+        // The old first-3 key collided on siblings: Jacob and Jackson Perlich both became PERLICH_JAC, so
+        // Jackson's card showed Jacob's career. Every place that builds a career key goes through careerKey().
+        const CAREER_KEY_FIRST_LEN = 4;
+        const careerKey = (firstName, lastName) =>
+          `${(lastName || '').toUpperCase()}_${(firstName || '').substring(0, CAREER_KEY_FIRST_LEN).toUpperCase()}`;
+
+        // v63.5: nickname groups for the career lookup. When a roster name has no exact career key, the
+        // lookup tries the other names in its group — e.g. the stats page said "Joey Klose" but the roster
+        // says "Joseph Klose". Only true nickname/formal (or same-name spelling) pairs belong here; never two
+        // different names (Jacob and Jackson are NOT a group). A variant key that exactly belongs to another
+        // player on the same roster is never borrowed.
+        const NICKNAME_GROUPS = [
+          ['joe', 'joey', 'joseph'], ['jake', 'jacob', 'jakob'], ['mike', 'mikey', 'michael'],
+          ['nick', 'nicky', 'nic', 'nicholas', 'nicolas'], ['nate', 'nathan', 'nathaniel'],
+          ['matt', 'matty', 'matthew', 'mathew'], ['tom', 'tommy', 'thomas'], ['dan', 'danny', 'daniel'],
+          ['andy', 'andrew'], ['tony', 'anthony'], ['sam', 'sammy', 'samuel'], ['ben', 'benny', 'benjamin'],
+          ['will', 'willie', 'william', 'bill', 'billy'], ['max', 'maxwell', 'maximilian', 'maximus'],
+          ['tim', 'timmy', 'timothy'], ['jim', 'jimmy', 'james'], ['jon', 'jonny', 'jonathan', 'jonathon'],
+          ['alex', 'alexander'], ['sid', 'sidney', 'syd', 'sydney'], ['luke', 'lukas'],
+          ['charlie', 'charles', 'chuck'], ['rick', 'ricky', 'rich', 'richy', 'richard'],
+          ['rob', 'robbie', 'robert', 'bob', 'bobby'], ['ed', 'eddie', 'eddy', 'edward'],
+          ['ted', 'teddy', 'theo', 'theodore'], ['gabe', 'gabriel'], ['steve', 'steven', 'stephen'],
+          ['cam', 'cameron', 'camron'], ['zach', 'zack', 'zac', 'zak', 'zachary', 'zacharia', 'zachariah'],
+          ['dave', 'david'], ['ken', 'kenny', 'kenneth'], ['nik', 'niklaus', 'niklas'],
+          ['bass', 'seb', 'sebastian'], ['wes', 'wesley'], ['gus', 'august', 'augustus'], ['ollie', 'oliver'],
+          ['aiden', 'aidan', 'ayden', 'aden'], ['shea', 'shey', 'shay']
+        ];
+        const careerKeyVariants = (firstName, lastName) => {
+          const f = (firstName || '').trim().toLowerCase().split(/\s+/)[0];
+          const out = [];
+          for (const g of NICKNAME_GROUPS) {
+            if (!g.includes(f)) continue;
+            for (const n of g) { const k = careerKey(n, lastName); if (!out.includes(k)) out.push(k); }
+          }
+          return out;
         };
 
         // Get sorted list of teams for dropdown
@@ -1866,9 +1905,8 @@
             try {
               const careerData = {};
               roster.forEach(player => {
-                // Use first 3 chars of first name to distinguish siblings (e.g., MCCABE_JON vs MCCABE_JOE)
-                const firstNameKey = player.firstName?.substring(0, 3)?.toUpperCase() || '';
-                const key = `${player.lastName?.toUpperCase()}_${firstNameKey}`;
+                // v63.5: LASTNAME_FIRST4 key (first 3 collided on siblings, e.g. Jacob/Jackson Perlich)
+                const key = careerKey(player.firstName, player.lastName);
                 
                 if (player.baseCareerStats && player.baseCareerStats.gp > 0) {
                   careerData[key] = {
@@ -1905,11 +1943,22 @@
               const careerData = JSON.parse(stored);
               console.log('📂 Loading career stats from localStorage:', Object.keys(careerData).length, 'players');
               
+              // v63.5: exact keys of everyone on this roster — a nickname fallback never borrows one of these
+              const rosterKeys = new Set(roster.map(p => careerKey(p.firstName, p.lastName)));
               return roster.map(player => {
-                // Use first 3 chars of first name to distinguish siblings (e.g., MCCABE_JON vs MCCABE_JOE)
-                const firstNameKey = player.firstName?.substring(0, 3)?.toUpperCase() || '';
-                const key = `${player.lastName?.toUpperCase()}_${firstNameKey}`;
-                const savedCareer = careerData[key];
+                // v63.5: LASTNAME_FIRST4 key (first 3 collided on siblings, e.g. Jacob/Jackson Perlich)
+                const key = careerKey(player.firstName, player.lastName);
+                let savedCareer = careerData[key];
+                if (!savedCareer) {
+                  // v63.5: nickname fallback (roster "Joseph" ↔ stats page "Joey")
+                  for (const alt of careerKeyVariants(player.firstName, player.lastName)) {
+                    if (alt !== key && careerData[alt] && !rosterKeys.has(alt)) {
+                      savedCareer = careerData[alt];
+                      console.log(`✓ Career stats for ${player.name} found under nickname key ${alt}`);
+                      break;
+                    }
+                  }
+                }
                 
                 if (savedCareer) {
                   if (player.position === 'G' && savedCareer.type === 'goalie') {
@@ -2584,10 +2633,9 @@
                       }
                     }
                     
-                    // Use first 3 chars to distinguish siblings (e.g., Jonny vs Joe McCabe)
+                    // v63.5: first 4 chars distinguish siblings (e.g., Jacob vs Jackson Perlich)
                     const existingPlayer = existingRoster.find(p => 
-                      p.lastName?.toUpperCase() === lastName.toUpperCase() && 
-                      p.firstName?.substring(0, 3)?.toUpperCase() === firstName.substring(0, 3)?.toUpperCase()
+                      careerKey(p.firstName, p.lastName) === careerKey(firstName, lastName)
                     );
                     
                     // Normalize D|F and F|D to D for consistency
@@ -2687,10 +2735,9 @@
                     const lastName = nameParts[nameParts.length - 1];
                     const firstName = nameParts.slice(0, -1).join(' ');
                     
-                    // Use first 3 chars to distinguish siblings (e.g., Jonny vs Joe McCabe)
+                    // v63.5: first 4 chars distinguish siblings (e.g., Jacob vs Jackson Perlich)
                     const existingPlayer = existingRoster.find(p => 
-                      p.lastName?.toUpperCase() === lastName.toUpperCase() && 
-                      p.firstName?.substring(0, 3)?.toUpperCase() === firstName.substring(0, 3)?.toUpperCase()
+                      careerKey(p.firstName, p.lastName) === careerKey(firstName, lastName)
                     );
                     
                     // Normalize D|F and F|D to D for consistency
@@ -3504,10 +3551,9 @@
                     else { break; }
                   }
                   const nameParts = realParts.length > 0 ? realParts : rawParts;
-                  // Use first 3 chars to distinguish siblings (e.g., Jonny vs Joe McCabe)
-                  const firstChars = nameParts[0]?.substring(0, 3)?.toUpperCase() || '';
+                  // v63.5: LASTNAME_FIRST4 key (first 3 collided on siblings, e.g. Jacob/Jackson Perlich)
                   const lastName = nameParts[nameParts.length - 1]?.toUpperCase() || '';
-                  const key = `${lastName}_${firstChars}`;
+                  const key = careerKey(nameParts[0], lastName);
                   
                   if (inSkaterSection && fields.length >= 6) {
                     // Detect 25-26+ format: fields[2] is Pos (F/D/G), fields[3] is Grade
