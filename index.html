@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legacy Line Charts v63.5</title>
+    <title>Legacy Line Charts v63.6</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone@7.23.10/babel.min.js"></script>
@@ -687,7 +687,7 @@
           ['cam', 'cameron', 'camron'], ['zach', 'zack', 'zac', 'zak', 'zachary', 'zacharia', 'zachariah'],
           ['dave', 'david'], ['ken', 'kenny', 'kenneth'], ['nik', 'niklaus', 'niklas'],
           ['bass', 'seb', 'sebastian'], ['wes', 'wesley'], ['gus', 'august', 'augustus'], ['ollie', 'oliver'],
-          ['aiden', 'aidan', 'ayden', 'aden'], ['shea', 'shey', 'shay']
+          ['aiden', 'aidan', 'ayden', 'aydan', 'aden'], ['shea', 'shey', 'shay']
         ];
         const careerKeyVariants = (firstName, lastName) => {
           const f = (firstName || '').trim().toLowerCase().split(/\s+/)[0];
@@ -1994,6 +1994,16 @@
                     };
                     console.log(`✓ Loaded SKATER career for ${player.name}`);
                   }
+                } else {
+                  // v63.6: no stored career for this player — clear any career numbers carried over from the
+                  // previous roster. parseRoster carries a returning player's old base forward on re-import, so
+                  // Jackson Perlich kept Jacob's PERLICH_JAC base (from before the v63.5 key change) and the
+                  // Player Stats step would have added this season on top of it. Stored career stats are the
+                  // only source of truth for career numbers.
+                  delete player.baseCareerStats;
+                  delete player.baseCareerGoalieStats;
+                  delete player.careerStats;
+                  delete player.careerGoalieStats;
                 }
                 
                 return player;
